@@ -1,0 +1,20 @@
+{
+  "name": "@repo/auth",
+  "type": "module",
+  "scripts": {},
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "@oslojs/encoding": "^1.1.0",
+    "@repo/env": "workspace:*",
+    "drizzle-orm": "^0.39.3"
+  },
+  "devDependencies": {
+    "@repo/typescript-config": "workspace:*",
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
+}

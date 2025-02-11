@@ -1,0 +1,22 @@
+{
+  "name": "@repo/api",
+  "type": "module",
+  "scripts": {
+    "test": "bun test"
+  },
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "@repo/server": "workspace:*",
+    "@elysiajs/eden": "^1.2.0"
+  },
+  "devDependencies": {
+    "@repo/typescript-config": "workspace:*",
+    "@types/bun": "latest",
+    "elysia": "^1.2.12"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
+}

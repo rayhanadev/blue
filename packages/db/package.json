@@ -1,0 +1,25 @@
+{
+  "name": "@repo/db",
+  "type": "module",
+  "scripts": {
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
+    "db:studio": "drizzle-kit studio"
+  },
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "@repo/env": "workspace:*",
+    "drizzle-orm": "^0.39.3",
+    "pg": "^8.13.1"
+  },
+  "devDependencies": {
+    "@repo/typescript-config": "workspace:*",
+    "@types/bun": "latest",
+    "drizzle-kit": "^0.30.4"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
+}

@@ -17,6 +17,7 @@
         "elysia": "^1.2.12",
       },
       "devDependencies": {
+        "@repo/typescript-config": "workspace:*",
         "@types/bun": "latest",
       },
       "peerDependencies": {
@@ -27,9 +28,10 @@
       "name": "@repo/api",
       "dependencies": {
         "@elysiajs/eden": "^1.2.0",
-        "@repo/server": "*",
+        "@repo/server": "workspace:*",
       },
       "devDependencies": {
+        "@repo/typescript-config": "workspace:*",
         "@types/bun": "latest",
         "elysia": "^1.2.12",
       },

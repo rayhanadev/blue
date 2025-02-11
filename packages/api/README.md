@@ -1,15 +1,5 @@
 # @repo/api
 
-To install dependencies:
-
-```bash
-bun install
-```
-
-To run:
-
-```bash
-bun run src/index.ts
-```
-
-This project was created using `bun init` in bun v1.2.2. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
+Elysia Eden Treaty client for interacting with the API server. See
+[apps/server](/apps/server) for more information regarding the server
+implementation.

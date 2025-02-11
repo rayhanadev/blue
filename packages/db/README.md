@@ -1,15 +1,7 @@
 # @repo/db
 
-To install dependencies:
+Drizzle ORM for interacting with the database. See
+[./src/schema](/packages/db/src/schema) for information regarding the schema
+definitions.
 
-```bash
-bun install
-```
-
-To run:
-
-```bash
-bun run src/index.ts
-```
-
-This project was created using `bun init` in bun v1.2.2. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
+Run `bun db:studio` to start the Drizzle Studio.

@@ -1,15 +1,4 @@
 # @repo/server
 
-To install dependencies:
-
-```bash
-bun install
-```
-
-To run:
-
-```bash
-bun run src/index.ts
-```
-
-This project was created using `bun init` in bun v1.2.2. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
+RESTful API Server for Blue. Uses Elysia for the server implementation.
+Routes are stored in `src/routes`.

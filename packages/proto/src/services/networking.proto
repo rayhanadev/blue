@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package networking;
+
+message NetworkRequest {
+    oneof operation {
+        OpenPort openport = 1;
+        ClosePort closeport = 2;
+    }
+}
+
+message NetworkResponse {
+    bool success = 1;
+    string message = 2;
+}
+
+message OpenPort {
+    int32 port = 1;
+}
+
+message ClosePort {
+    int32 port = 1;
+}

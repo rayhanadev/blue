@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+package runtime;
+
+message RuntimeRequest {
+    oneof operation {
+        SendInput input = 1;
+        FetchOutput output = 2;
+        FetchError error = 3;
+    }
+}
+
+message RuntimeResponse {
+    string message = 1;
+}
+
+message SendInput {
+    string process_id = 1;
+    string data = 2;
+}
+
+message FetchOutput {
+    string process_id = 1;
+}
+
+message FetchError {
+    string process_id = 1;
+}

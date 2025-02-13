@@ -1,0 +1,41 @@
+syntax = "proto3";
+
+package package;
+
+message PackageRequest {
+    oneof operation {
+        SearchPackage search = 1;
+        PackageInfo info = 2;
+        AddPackage add = 3;
+        RemovePackage remove = 4;
+        InstallPackage install = 5;
+        ListPackages list = 6;
+    }
+}
+
+message PackageResponse {
+    bool success = 1;
+    string message = 2;
+}
+
+message SearchPackage {
+    string query = 1;
+}
+
+message PackageInfo {
+    string package_name = 1;
+}
+
+message AddPackage {
+    string package_name = 1;
+}
+
+message RemovePackage {
+    string package_name = 1;
+}
+
+message InstallPackage {
+    string package_name = 1;
+}
+
+message ListPackages {}

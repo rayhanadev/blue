@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package metadata;
+
+import "google/protobuf/timestamp.proto";
+
+message FileMetadata {
+    string file_id = 1;
+    string file_name = 2;
+    int64 file_size = 3;
+    string owner = 4;
+    google.protobuf.Timestamp last_modified = 5;
+}

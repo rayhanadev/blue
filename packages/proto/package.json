@@ -1,0 +1,24 @@
+{
+  "name": "@repo/proto",
+  "type": "module",
+  "scripts": {
+    "dev": "bun dev",
+    "build": "bun builid",
+    "generate": "buf generate"
+  },
+  "exports": {
+    ".": "./dist/main_pb.ts"
+  },
+  "dependencies": {
+    "@bufbuild/protobuf": "^2.2.3"
+  },
+  "devDependencies": {
+    "@bufbuild/buf": "^1.50.0",
+    "@bufbuild/protoc-gen-es": "^2.2.3",
+    "@repo/typescript-config": "workspace:*",
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
+}

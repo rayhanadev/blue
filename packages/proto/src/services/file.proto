@@ -1,0 +1,64 @@
+syntax = "proto3";
+
+package file;
+
+import "common/metadata.proto";
+import "common/crdt.proto";
+
+message FileRequest {
+    oneof operation {
+        WriteFile write = 1;
+        RemoveFile remove = 2;
+        MoveFile move = 3;
+        MakeDirectory mkdir = 4;
+        FileStat stat = 5;
+        ReadFile read = 6;
+        ReadDirectory readdir = 7;
+        SyncFile sync = 8;
+        ApplyEdits apply_edits = 9;
+    }
+}
+
+message FileResponse {
+    bool success = 1;
+    string message = 2;
+}
+
+message WriteFile {
+    string file_id = 1;
+    bytes content = 2;
+}
+
+message RemoveFile {
+    string file_id = 1;
+}
+
+message MoveFile {
+    string source = 1;
+    string destination = 2;
+}
+
+message MakeDirectory {
+    string path = 1;
+}
+
+message FileStat {
+    string file_id = 1;
+}
+
+message ReadFile {
+    string file_id = 1;
+}
+
+message ReadDirectory {
+    string directory_path = 1;
+}
+
+message SyncFile {
+    string file_id = 1;
+}
+
+message ApplyEdits {
+    string file_id = 1;
+    repeated crdt.TextEdit edits = 2;
+}

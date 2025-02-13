@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package exec;
+
+message ExecRequest {
+    string command = 1;
+    repeated string args = 2;
+}
+
+message ExecResponse {
+    int32 exit_code = 1;
+    string stdout = 2;
+    string stderr = 3;
+}

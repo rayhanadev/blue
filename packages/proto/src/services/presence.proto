@@ -1,0 +1,38 @@
+syntax = "proto3";
+
+package presence;
+
+message PresenceRequest {
+    oneof event {
+        JoinSession join = 1;
+        LeaveSession leave = 2;
+        FileOpened fileopened = 3;
+        FollowUser follow = 4;
+        UnfollowUser unfollow = 5;
+    }
+}
+
+message PresenceResponse {
+    bool success = 1;
+}
+
+message JoinSession {
+    string user_id = 1;
+}
+
+message LeaveSession {
+    string user_id = 1;
+}
+
+message FileOpened {
+    string file_id = 1;
+    string user_id = 2;
+}
+
+message FollowUser {
+    string user_id = 1;
+}
+
+message UnfollowUser {
+    string user_id = 1;
+}

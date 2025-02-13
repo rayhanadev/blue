@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package crdt;
+
+import "common/metadata.proto";
+import "google/protobuf/timestamp.proto";
+
+message FileCRDT {
+    string file_id = 1;
+    repeated TextEdit edits = 2;
+    metadata.FileMetadata metadata = 3;
+}
+
+message TextEdit {
+    string user_id = 1;
+    int32 position = 2;
+    string text = 3;
+    google.protobuf.Timestamp timestamp = 4;
+}
+
+message ApplyEdits {
+    string file_id = 1;
+    repeated TextEdit edits = 2;
+}

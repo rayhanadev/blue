@@ -1,0 +1,22 @@
+{
+  "name": "@repo/daemon",
+  "type": "module",
+  "scripts": {
+    "dev": "bun run src/index.ts",
+    "build": "bun build src/index.ts --compile --outfile dist/daemon"
+  },
+  "dependencies": {
+    "@connectrpc/connect": "^2.0.1",
+    "@connectrpc/connect-node": "^2.0.1",
+    "@repo/proto": "workspace:*",
+    "dockerode": "^4.0.4"
+  },
+  "devDependencies": {
+    "@repo/typescript-config": "workspace:*",
+    "@types/bun": "^1.2.2",
+    "@types/dockerode": "^3.3.34"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
+}

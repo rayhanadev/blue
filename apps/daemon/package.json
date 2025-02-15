@@ -8,8 +8,10 @@
   "dependencies": {
     "@connectrpc/connect": "^2.0.1",
     "@connectrpc/connect-node": "^2.0.1",
+    "@inquirer/prompts": "^7.3.1",
     "@repo/proto": "workspace:*",
-    "dockerode": "^4.0.4"
+    "dockerode": "^4.0.4",
+    "sade": "^1.8.1"
   },
   "devDependencies": {
     "@repo/typescript-config": "workspace:*",

@@ -11,7 +11,7 @@
     "./common/crdt": "./dist/common/crdt_pb.ts",
     "./common/metadata": "./dist/common/metadata_pb.ts",
     "./services/exec": "./dist/services/exec_pb.ts",
-    "./services/file": "./dist/services/file_pb.ts",
+    "./services/files": "./dist/services/file_pb.ts",
     "./services/networking": "./dist/services/networking_pb.ts",
     "./services/package": "./dist/services/package_pb.ts",
     "./services/ping": "./dist/services/ping_pb.ts",

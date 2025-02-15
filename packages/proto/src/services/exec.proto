@@ -8,7 +8,6 @@ message ExecRequest {
 }
 
 message ExecResponse {
-    int32 exit_code = 1;
-    string stdout = 2;
-    string stderr = 3;
+    string output = 1;
+    bool is_error = 2;
 }

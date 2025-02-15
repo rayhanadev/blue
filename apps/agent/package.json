@@ -3,7 +3,8 @@
   "type": "module",
   "scripts": {
     "dev": "bun run src/index.ts",
-    "build": "bun build src/index.ts --compile --outfile dist/agent"
+    "build": "bun build src/index.ts --compile --outfile dist/agent",
+    "build:docker": "cd .. && docker build -f apps/agent/Dockerfile ."
   },
   "dependencies": {
     "@connectrpc/connect-node": "^2.0.1",

@@ -14,7 +14,7 @@ service SystemService {
     rpc Ping(ping.PingRequest) returns (ping.PongResponse);
     rpc FileOperation(file.FileRequest) returns (file.FileResponse);
     rpc PresenceUpdate(presence.PresenceRequest) returns (presence.PresenceResponse);
-    rpc ExecuteCommand(exec.ExecRequest) returns (exec.ExecResponse);
+    rpc ExecuteCommand(exec.ExecRequest) returns (stream exec.ExecResponse);
     rpc ManagePackage(package.PackageRequest) returns (package.PackageResponse);
     rpc ManageNetwork(networking.NetworkRequest) returns (networking.NetworkResponse);
     rpc RuntimeIO(runtime.RuntimeRequest) returns (runtime.RuntimeResponse);
